@@ -129,7 +129,7 @@
 	};
 </script>
 
-<audio bind:this={sfxTick} src={asset('tick.mp3')}></audio>
+<audio bind:this={sfxTick} src={asset('/tick.mp3')}></audio>
 <audio bind:this={sfxDing} src={asset('/advance.wav')} volume={0.3}></audio>
 
 <div class="flex h-dvh w-full items-center justify-center bg-gray-800 p-4">
