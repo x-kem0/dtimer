@@ -3,7 +3,7 @@
 	import { calculateDuration, parseIntervals } from '$lib/interval_parse';
 	import { Timer, type TimeSlot } from '$lib/timer';
 	import { onMount } from 'svelte';
-	import { collapseTextChangeRangesAcrossMultipleVersions } from 'typescript';
+	import { asset } from '$app/paths';
 
 	let intervals = $state('1m work\n1m break');
 	let parsedIntervals: Array<TimeSlot> = $state([]);
@@ -129,8 +129,8 @@
 	};
 </script>
 
-<audio bind:this={sfxTick} src="/tick.mp3"></audio>
-<audio bind:this={sfxDing} src="/advance.wav" volume={0.3}></audio>
+<audio bind:this={sfxTick} src={asset('tick.mp3')}></audio>
+<audio bind:this={sfxDing} src={asset('/advance.wav')} volume={0.3}></audio>
 
 <div class="flex h-dvh w-full items-center justify-center bg-gray-800 p-4">
 	<div class="flex aspect-1/2 h-full flex-col items-center font-mono">
